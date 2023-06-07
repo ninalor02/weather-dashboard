@@ -11,16 +11,35 @@
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous">
     </script>
-<header class="row">
-    <div class="col-md-12" id="header"></div>
-
-</header>
-
-</head>
 <header>
-
+    <div>
+        <h1>Weather Dashboard</h1>
+    </div>
 </header>
+</head>
 <body>
+    <main class="main">
+        <div class="container-fluid"></div>
+            <div class="row page-content">
+                <div class="form-container">
+                    <form id="search-form">
+                         <!-- search input label -->
+                <div class="row">
+                    <label for="search-input">Enter in a city</label>
+                </div>
+                <div class="row m-0">
+                    <div class="col-sm-8 p-0 my-auto">
+                        <input type="text" id="search-input" name="search-input" class="search-input rounded">
+                    </div>
+                    <div class="col-sm-4 p-0">
+                        <button type="submit" class="btn bg-primary rounded search-button">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
 
 
 
