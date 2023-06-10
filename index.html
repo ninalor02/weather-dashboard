@@ -22,7 +22,7 @@
         <div class="container-fluid"></div>
             <div class="row page-content">
                 <div class="form-container">
-                    <form id="search-form">
+                    <form class="search-form">
                          <!-- search input label -->
                 <div class="row">
                     <label for="search-input">Enter in a city</label>
@@ -39,21 +39,15 @@
                 </div>
             </form>
         </div>
+        <!--history from search-->
+        <div id="search-history-container" class="row m-0 search-history-container"></div>
+
+        <!--current weather column-->
+        <div>
+            <!--current title-->
+            <div id="current" class="row"></div>
+                <h2 id="current-title" class="d-inline"></h2>
+        </div>
     </main>
-
-
-
-
-
-
-
-
-
-
-<!-- links to jquery-->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<!-- links to js-->
     <script src="./assets/script/script.js"></script>
 </body>
-</html>
