@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- links to css-->
+    <!-- links to css-->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weather Dashboard</title>
-<!-- links to DayJS-->
+    <!-- links to DayJS-->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous">
-    </script>
-<header>
-    <div>
-        <h1>Weather Dashboard</h1>
-    </div>
-</header>
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous">
+        </script>
+    <header>
+        <div>
+            <h1>Weather Dashboard</h1>
+        </div>
+    </header>
 </head>
+
 <body>
     <main class="main">
         <div class="container-fluid"></div>
-            <div class="row page-content">
-                <div class="form-container">
-                    <form class="search-form">
-                         <!-- search input label -->
-                <div class="row">
-                    <label for="search-input">Enter in a city</label>
-                </div>
-                <div class="row m-0">
-                    <div class="col-sm-8 p-0 my-auto">
-                        <input type="text" id="search-input" name="search-input" class="search-input rounded">
+        <div class="row page-content">
+            <div class="form-container">
+                <form class="search-form">
+                    <!-- search input label -->
+                    <div class="row">
+                        <label for="search-input">Enter in a city</label>
                     </div>
-                    <div class="col-sm-4 p-0">
-                        <button type="submit" class="btn bg-primary rounded search-button">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
+                    <div class="row m-0">
+                        <div class="col-sm-8 p-0 my-auto">
+                            <input type="text" id="search-input" name="search-input" class="search-input rounded">
+                        </div>
+                        <div class="col-sm-4 p-0">
+                            <button type="submit" class="btn bg-primary rounded search-button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div>
-        <!--history from search-->
-        <div id="search-history-container" class="row m-0 search-history-container"></div>
+                </form>
+            </div>
+            <!--history from search-->
+            <div id="search-history-container" class="row m-0 search-history-container"></div>
 
-        <!--current weather column-->
-        <div>
-            <!--current title-->
-            <div id="current" class="row"></div>
+            <!--current weather column-->
+            <div>
+                <!--current title-->
+                <div id="current" class="row"></div>
                 <h2 id="current-title" class="d-inline"></h2>
-        </div>
+            </div>
+
+            <div>
+                <!--current weather temp, wind, humidity-->
+                <p class="current-temp" id="current-temp"></p>
+                <p class="current-wind" id="current-wind"></p>
+                <p class="current-humidity" id="current-humidity"></p>
+            </div>
+
     </main>
     <script src="./assets/script/script.js"></script>
 </body>
