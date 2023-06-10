@@ -1,31 +1,46 @@
 var button = document.getElementById('#btn');
 var inText = document.querySelector("#inputText");
 
+var historyList = function(cityName) {
+    $('.previous-search:contains("' + cityName + '")').remove();
 
-button.addEventListener("click", function() { //not working - error //
-    getData();
-  });
+    var searchHistoryInput = $('<p>');
+    searchHistoryInput.addClass('past-search');
+    searchHistoryInput.text(cityName);
+    //console.log('data', historyInput) // not working //
 
-async function getdata() {
+    var searchInputContainer = $('<div>');
+    searchInputContainer.addClass('past-search-container');
 
-const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13';
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '20f0a2a25bmsha1132609ec51c03p19afc2jsn69af4cefaa78',
-		'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
-	},
-    body: JSON.stringify({
-		text: textToTranslate.value,
-		target: 'ru'
-	})
+    searchInputContainer.append(historyInput);
+
+    var searchHistoryContainer = $('#searchHistoryContainer');
+    searchHistoryContainer.append(searchInputContainer);
+
+    if (saveSearch.length > 0) {
+        var previousSearch = localStorage.getItem('saveSearch');
+        $("#search-input").val("");
+    };
 };
 
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
+var loadHistory = function() {
 
-	console.log(result);
-} catch (error) {
-	console.error(error);
-}}
+    var saveSearchHistory = localStorage.getItem("saveSearch");
+    if (!saveSearchHistory) {
+        return false;
+    }
+
+    saveSearchHistory = JSON.parse(saveSearchHistory);
+    for (var i = 0; i <saveSearchHistory.length; i++) {
+        historyList(saveSearchHistory[i]);
+    }
+};
+
+var currentWeatherContainer = function(cityName) {
+    //get api 
+    fetch('https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13')
+    .then(function(response) {
+        return response.json();
+    })
+}
+
