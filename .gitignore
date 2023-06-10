@@ -1,3 +1,8 @@
+- api key
 var apiKey = '20f0a2a25bmsha1132609ec51c03p19afc2jsn69af4cefaa78';
 console.log('data') console log to make sure it works
+
+- save search
+var saveSearch = [];
+console.log('saveSearch') // added to gitignore file need to delete//
 
