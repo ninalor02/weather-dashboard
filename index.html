@@ -1,15 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    
     <title>Weather Dashboard</title>
-    
+    <!-- link to bootstrap / jquery-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  
+    <!-- links to css-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <header>
+        <div>
+            <h1>Weather Dashboard</h1>
+        </div>
+    </header>
 </head>
+
 <body>
-    
+    <main class="main">
+        <div class="container-fluid"></div>
+        <div class="row page-content"></div>
+            <div class="col-sm-4"></div>
+            <div class="form-container"></div>
+                <form class="search-form">
+                    <!-- search input label -->
+                    <div class="row">
+                        <label for="search-input">Enter in a city</label>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-sm-8 p-0 my-auto">
+                            <input type="text" id="search-input" name="search-input" class="search-input rounded">
+                        </div>
+                        <div class="col-sm-4 p-0">
+                            <button id="btn" type="submit" class="btn bg-primary rounded search-button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--history from search-->
+            <div id="history-container" class="row m-0 search-history-container"></div>
+
+            <!--current weather column-->
+            <div>
+                <!--current title-->
+                <div id="current" class="row d-block"></div>
+                <h2 id="current-title" class="d-inline"></h2>
+            </div>
+
+            <div>
+                <!--current weather temp, wind, humidity-->
+                <p class="current-temp" id="current-temp"></p>
+                <p class="current-wind" id="current-wind"></p>
+                <p class="current-humidity" id="current-humidity"></p>
+            </div>
+
+    </main>
     <script src="./assets/script/script.js"></script>
 </body>
-</html>

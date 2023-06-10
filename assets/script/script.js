@@ -1,8 +1,8 @@
 var button = document.getElementById('#btn');
-var searchInput = 
+var inText = document.querySelector("#inputText");
 
 
-button.addEventListener("click", function() {
+button.addEventListener("click", function() { //not working - error //
     getData();
   });
 
