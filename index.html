@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <!-- link to bootstrap / jquery-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13" async type="tect/javascript"></script>
+    <script src="https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13" async
+        type="tect/javascript"></script>
     <!-- links to css-->
     <link rel="stylesheet" href="./assets/css/style.css">
     <header>
@@ -15,17 +17,23 @@
             <h1 class="col-lg-8">Weather Dashboard</h1>
         </div>
         <!-- search bar-->
-        <div class="searchbar-content"></div>
-        <form>
-            <input class="search-input">
+        <div>
+            <form>
+                <input class="search-input">
                 <a href="#" class="btn btn-info btn-lg">
-                  <span class="glyphicon glyphicon-search"></span> Search 
+                    <button class="glyphicon glyphicon-search"></button>
                 </a>
-        </form>
-        <div class="previous-locations"></div>
+            </form>
+        </div>
+        <div class="previous-search"></div>
+        <div>
+            <div></div>
+        </div>
 
 </head>
+
 <body>
     <script src="./assets/script/script.js"></script>
 </body>
+
 </html>
