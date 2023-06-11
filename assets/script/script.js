@@ -1,23 +1,31 @@
-let previousSearch = false;
+var searchButton = document.querySelector('#searchButton');
+var previousSearch = document.querySelector('#previousSearch');
+var cityName = document.querySelector('#cityName');
+var fiveDayForecast = document.querySelector('#fiveDayForecast');
 
-$('#searchButton').on('click', function() {
-let cityValue = $('input').val();
-lastCity = true;
-cityWeatherInfo(cityValue);
-$('input').val('');
-console.log('data', cityWeatherInfo)
-});
+button.addEventListener("click", function() {
+    getData();
+  });
+ 
+async function getData() {
+const url = 'https://yahoo-weather5.p.rapidapi.com/weather?location=sunnyvale&format=json&u=f';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '20f0a2a25bmsha1132609ec51c03p19afc2jsn69af4cefaa78',
+		'X-RapidAPI-Host': 'yahoo-weather5.p.rapidapi.com'
+	},
+  body: JSON.stringify({
+		text: textToTranslate.value,
+		target: 'ru'
+	})
+};
 
-$("#cityList").on("click", "button", function(event) {
-  let cityValue = event.target.textContent;
-  theLastCity = false;
-  cityWeatherInfo(cityValue);
-});
-
-
-
-
-
-
-
-
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+  cityName.textContent = searchText;
+  console.log(searchText);
+} catch (error) {
+	console.error(error);
+}}
