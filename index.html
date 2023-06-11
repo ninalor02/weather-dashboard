@@ -15,24 +15,39 @@
         <div>
             <h1 class="col-lg-8">Weather Dashboard</h1>
         </div>
-        <!-- search bar-->
-        <div>
-            <form>
+        <!-- search bar, previous search -->
+        <main class="container col-md-12">
+            <div>
+                <h2 id="cityName">Enter A City</h2>
                 <input class="search-input">
                 <a href="#" class="btn btn-info btn-lg">
-                        <button type="submit" id="searchBtn" class="btn btn-primary">
-                            <span class="glyphicon glyphicon-search"></span> Search 
-                        </button>
+                    <button type="submit" id="searchButton" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-search"></span> Search
+                    </button>
+                    <div id="previousSearch" class="btn-group-vertical btn-block mt-2"></div>
                 </a>
-            </form>
-        </div>
-        <div class="previous-search"></div>
-        <div>
-            <div></div>
-        </div>
-
+            </div>
+            <!-- current search-->
+            <div class="col-md-8 ml-5">
+                <div class="row">
+                    <div class="col-md-12 p-2 border rounded">
+                        <h3 id="cityName">Previous Search</h3>
+                        <br> <!-- break-->
+                        <p class="font-weight-bold">Temperature: <span id="temp"></span></p>
+                        <p class="font-weight-bold">Humidity: <span id="humidity"></span></p>
+                        <p class="font-weight-bold">Wind Speed: <span id="windSpeed"></span></p>
+                        <p class="font-weight-bold">UV Index: <span id="uvIndex"></span></p>
+                    </div>
+                </div>
+                <!-- future results-->
+                <div class="col-md-12 mt-3 ">
+                    <div class="row">
+                        <h3>5 Day Forecast</h3>
+                    </div>
+                    <div id="fiveDayForecast"></div>
+                </div>
+        </main>
 </head>
-
 <body>
     <script src="./assets/script/script.js"></script>
 </body>
