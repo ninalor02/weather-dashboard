@@ -1,5 +1,6 @@
-var button = document.getElementById('#btn');
-var inText = document.querySelector("#inputText");
+let theLastCity = false;
+
+$('#sea')
 
 button.addEventListener("click", function() {
   getData();
