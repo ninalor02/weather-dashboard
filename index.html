@@ -5,65 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weather dashboard</title>
-    <!-- link to bootstrap / jquery-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    </script>
     <!-- links to css-->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <header>
-        <div>
-            <h1>Weather Dashboard</h1>
-        </div>
-    </header>
 </head>
-<body>
+<header>
+    <h1 id="header">Weather Dashboard</h1>
+</header>
+
+<body onload="defaultScreen()">
     <!-- search bar, previous search -->
     <div>
-        <h2 id="cityList">Enter A City</h2>
-        <p><input type="text" id="cityInput"></p>
-        <button onclick="=geInfo()">Search</button>
-        <h3 id="cityName">--minneapolis--</h3>
+        <p id="inputContainer">Enter a city: <input type="text" id="cityInput">
+            <button onclick="getInfo()">Search</button></p>
     </div>
-    
+    <h3 id="cityName">--minneapolis--</h3>
+
     <!-- weather container-->
     <div class="weatherContainer">
         <div class="iconsContainer">
             <div class="icons">
-                <p class="weather" id="day1">
-                <p class="minValues" id="day1Min">
-                <p class="maxValues" id="day1Max"></p>
+                <p class="weather" id="day1"></p>
+                <p class="temp" id="day1TempMin"></p>
+                <p class="wind" id="day1Wind"></p>
+                <p class="humidity" id="day1Humidity"></p>
             </div>
         </div>
         <div class="iconsContainer">
             <div class="icons">
-                <p class="weather" id="day2">
-                <p class="minValues" id="day2Min">
-                <p class="maxValues" id="day2Max"></p>
+                <p class="weather" id="day2"></p>
+                <p class="temp" id="day2TempMin"></p>
+                <p class="wind" id="day2Wind"></p>
+                <p class="humidity" id="day2Humidity"></p>
             </div>
         </div>
         <div class="iconsContainer">
             <div class="icons">
-                <p class="weather" id="day3">
-                <p class="minValues" id="day3Min">
-                <p class="maxValues" id="day3Max"></p>
+                <p class="weather" id="day3"></p>
+                <p class="temp" id="day3TempMin"></p>
+                <p class="wind" id="day3Wind"></p>
+                <p class="humidity" id="day3Humidity"></p>
             </div>
         </div>
         <div class="iconsContainer">
             <div class="icons">
-                <p class="weather" id="day4">
-                <p class="minValues" id="day4Min">
-                <p class="maxValues" id="day4Max"></p>
+                <p class="weather" id="day4"></p>
+                <p class="temp" id="day4TempMin"></p>
+                <p class="wind" id="day4Wind"></p>
+                <p class="humidity" id="day4Humidity"></p>
             </div>
         </div>
         <div class="iconsContainer">
             <div class="icons">
-                <p class="weather" id="day5">
-                <p class="minValues" id="day5Min">
-                <p class="maxValues" id="day5Max"></p>
+                <p class="weather" id="day5"></p>
+                <p class="temp" id="day5TempMin"></p>
+                <p class="wind" id="day5Wind"></p>
+                <p class="humidity" id="day5Humidity"></p>
             </div>
         </div>
-
+        <script type="text/javascript"></script>
         <script src="./assets/script/script.js"></script>
 </body>
 
