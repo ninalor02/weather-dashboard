@@ -1,5 +1,5 @@
 
-var apiKey = "2aa5de91e2d58f7baa00946e1b387784"
+var apiKey = "e028752f56f61eb12ac24546cea7f3f6"
 var savedSearches = [];
 
 function getInfo(){
@@ -7,13 +7,13 @@ function getInfo(){
   const cityName = document.getElementById("cityName");
   cityName.innerHTML = "--" + newName.value + "--"
 }
-// won't pull to live server- valid in insomnia //
-fetch("http://api.openweathermap.org/data/2.5/forecast?q=london&appid=2aa5de91e2d58f7baa00946e1b387784")
+
+fetch("http://api.openweathermap.org/data/2.5/forecast?q='+newName.value+'&appid=2aa5de91e2d58f7baa00946e1b387784")
 .then(response => response.json())
 .then(data =>{
   //temp //
   for(i=0; i<5; i++) {
-    document.getElementById("day" + (i+1)+"Temp").innerHTML = "Temp:" + Number(data.list[i].main.temp -290.62).toFixed(1)+"°";
+    document.getElementById("day" + (i+1)+"Temp").innerHTML = "Temp:" + Number(data.list[i].main.temp_min -290.62).toFixed(1)+"°";
   }
 //wind speed //
   for(i=0; i<5; i++) {
@@ -52,18 +52,20 @@ else{
   return day + d.getDay();
 }
 
-
 };
+searchButton.on('click', function (event){
+  event.preventDefault();
+  console.log('click', click)
 
-var text = document.getElementById("cityInput");
 var cityName = document.getElementById("cityName");
+var newName = localStorage.getItem('newName');
 
-var cityName = localStorage.getItem('newName');
-// console.log('text', text) working
+cityName.textContent = newName;
+console.log('cityName', cityName)
 
-text.addEventListener("click", function() {
-  if (cityName > 0) {
-    text.textContent = cityInput;
-    localStorage.setItem("cityInput", cityName);
-  }
-});
+    localStorage.setItem("cityInput", cityInput);
+  });
+
+
+
+  
