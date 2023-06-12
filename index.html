@@ -13,44 +13,58 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <header>
         <div>
-            <h1 class="col-lg-8">Weather Dashboard</h1>
+            <h1>Weather Dashboard</h1>
         </div>
     </header>
-        <!-- search bar, previous search -->
-        <main class="container col-md-12">
-            <div>
-                <h2 id="cityName">Enter A City</h2>
-                <input class="search-input">
-                <a href="#" class="btn btn-info btn-lg">
-                    <button type="submit" id="searchButton" class="btn btn-primary">
-                        <span class="glyphicon glyphicon-search"></span> Search
-                    </button>
-                    <div id="previousSearch" class="btn-group-vertical btn-block mt-2"></div>
-                </a>
-            </div>
-            <!-- current search-->
-            <div class="col-md-8 ml-5">
-                <div class="row">
-                    <div class="col-md-12 p-2 border rounded">
-                        <h3 id="cityName">Previous Search</h3>
-                        <br> <!-- break-->
-                        <p class="font-weight-bold">Temperature: <span id="temp"></span></p>
-                        <p class="font-weight-bold">Humidity: <span id="humidity"></span></p>
-                        <p class="font-weight-bold">Wind Speed: <span id="windSpeed"></span></p>
-                        <p class="font-weight-bold">UV Index: <span id="uvIndex"></span></p>
-                    </div>
-                </div>
-                <!-- future results-->
-                <div class="col-md-12 mt-3 ">
-                    <div class="row">
-                        <h3>5 Day Forecast</h3>
-                    </div>
-                    <div id="fiveDayForecast"></div>
-                </div>
-        </main>
 </head>
 <body>
-    <script src="./assets/script/script.js"></script>
+    <!-- search bar, previous search -->
+    <div>
+        <h2 id="cityList">Enter A City</h2>
+        <p><input type="text" id="cityInput"></p>
+        <button onclick="=geInfo()">Search</button>
+        <h3 id="cityName">--minneapolis--</h3>
+    </div>
+    
+    <!-- weather container-->
+    <div class="weatherContainer">
+        <div class="iconsContainer">
+            <div class="icons">
+                <p class="weather" id="day1">
+                <p class="minValues" id="day1Min">
+                <p class="maxValues" id="day1Max"></p>
+            </div>
+        </div>
+        <div class="iconsContainer">
+            <div class="icons">
+                <p class="weather" id="day2">
+                <p class="minValues" id="day2Min">
+                <p class="maxValues" id="day2Max"></p>
+            </div>
+        </div>
+        <div class="iconsContainer">
+            <div class="icons">
+                <p class="weather" id="day3">
+                <p class="minValues" id="day3Min">
+                <p class="maxValues" id="day3Max"></p>
+            </div>
+        </div>
+        <div class="iconsContainer">
+            <div class="icons">
+                <p class="weather" id="day4">
+                <p class="minValues" id="day4Min">
+                <p class="maxValues" id="day4Max"></p>
+            </div>
+        </div>
+        <div class="iconsContainer">
+            <div class="icons">
+                <p class="weather" id="day5">
+                <p class="minValues" id="day5Min">
+                <p class="maxValues" id="day5Max"></p>
+            </div>
+        </div>
+
+        <script src="./assets/script/script.js"></script>
 </body>
 
 </html>
