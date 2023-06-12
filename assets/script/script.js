@@ -1,10 +1,14 @@
+
+var apiKey = "2aa5de91e2d58f7baa00946e1b387784"
+var savedSearches = [];
+
 function getInfo(){
   const newName = document.getElementById("cityInput");
   const cityName = document.getElementById("cityName");
   cityName.innerHTML = "--" + newName.value + "--"
 }
-// won't pull //
-fetch("http://api.openweathermap.org/data/2.5/forecast?q='+newName.value+'&appid=2aa5de91e2d58f7baa00946e1b387784")
+// won't pull to live server- valid in insomnia //
+fetch("http://api.openweathermap.org/data/2.5/forecast?q=london&appid=2aa5de91e2d58f7baa00946e1b387784")
 .then(response => response.json())
 .then(data =>{
   //temp //
@@ -23,6 +27,10 @@ fetch("http://api.openweathermap.org/data/2.5/forecast?q='+newName.value+'&appid
 // image //
 for(i=0; i<5; i++) {
   document.getElementById("img" + (i+1)).src = "https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
+}
+
+for(i=0; i<5; i++) {
+  document.getElementById('day' + (i+1)).innerHTML = weekday[checkDay(i)];
 }
 
 })
@@ -44,21 +52,18 @@ else{
   return day + d.getDay();
 }
 
-for(i=0; i<5; i++) {
-  document.getElementById('day' + (i+1)).innerHTML = weekday[checkDay(i)];
-}
+
 };
 
-var day = document.getElementById("cityInput");
+var text = document.getElementById("cityInput");
 var cityName = document.getElementById("cityName");
 
-var cityInput = localStorage.getItem('day');
-var cityName = localStorage.getItem()
+var cityName = localStorage.getItem('newName');
+// console.log('text', text) working
 
-button.addEventListener("click", function() {
-  if (day > 0) {
-    count--;
-    counter.textContent = count;
-    localStorage.setItem("count", count);
+text.addEventListener("click", function() {
+  if (cityName > 0) {
+    text.textContent = cityInput;
+    localStorage.setItem("cityInput", cityName);
   }
 });
