@@ -6,3 +6,117 @@ console.log('data') console log to make sure it works
 var saveSearch = [];
 console.log('saveSearch') // added to gitignore file need to delete//
 
+fetch("http://api.openweathermap.org/data/2.5/forecast?q='+newName.value+'&appid=2aa5de91e2d58f7baa00946e1b387784")
+  .then(response => response.json())
+  .then(data => {
+  //  console.log(data) - works
+        //temp //
+    for (i = 0; i < 5; i++) {
+      document.getElementById("day" + (i + 1) + "Temp").innerHTML = "Temp:" + Number(data.list[i].main.temp_min - 290.62).toFixed(1) + "°";
+    }
+        //wind speed //
+    for (i = 0; i < 5; i++) {
+      document.getElementById("day" + (i + 1) + "Wind").innerHTML = "Wind:" + Number(data.list[i].wind.speed - 0.82).toFixed(1) + "%";
+    }
+        // humidity //
+    for (i = 0; i < 5; i++) {
+      document.getElementById("day" + (i + 1) + "Humidity").innerHTML = "Humidity" + Number(data.list[i].main.humidity - 86).toFixed(1) + "°";
+    }
+
+        // image //
+    for (i = 0; i < 5; i++) {
+      document.getElementById("img" + (i + 1)).src = "https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
+    }
+
+    for (i = 0; i < 5; i++) {
+      document.getElementById('day' + (i + 1)).innerHTML = weekday[checkDay(i)];
+    }
+  })
+.catch (err => ('somthing went wrong'))
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather dashboard</title>
+    <!-- links to css-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<header>
+    <h1 id="header">Weather Dashboard</h1>
+</header>
+
+<body onload="defaultScreen()">
+    <main>
+        <!-- search bar, previous search -->
+        <div>
+            <p id="inputContainer">Enter a city: <input type="text" id="cityInput">
+                <button onclick="getInfo()">Search</button>
+            </p>
+        </div>
+        <div  id="previousSearch" style="width:500px;height: 50px;border:2px solid #000;">
+            <h3 id="cityName">--minneapolis--</h3>
+        </div>
+
+        <!-- weather container-->
+        <div class="weatherContainer">
+            <div class="iconsContainer">
+                <div class="icons">
+                    <div class="image">
+                        <img class="imgClass" id="img1" alt=""></div>
+                    <p class="weather" id="day1"></p>
+                    <p class="temp" id="day1Temp"></p>
+                    <p class="wind" id="day1Wind"></p>
+                    <p class="humidity" id="day1Humidity"></p>
+                </div>
+            </div>
+            <div class="iconsContainer">
+                <div class="icons">
+                    <div class="image">
+                        <img class="imgClass" id="img1" alt=""></div>
+                    <p class="weather" id="day2"></p>
+                    <p class="temp" id="day2Temp"></p>
+                    <p class="wind" id="day2Wind"></p>
+                    <p class="humidity" id="day2Humidity"></p>
+                </div>
+            </div>
+            <div class="iconsContainer">
+                <div class="icons">
+                    <div class="image">
+                        <img class="imgClass" id="img1" alt=""></div>
+                    <p class="weather" id="day3"></p>
+                    <p class="temp" id="day3Temp"></p>
+                    <p class="wind" id="day3Wind"></p>
+                    <p class="humidity" id="day3Humidity"></p>
+                </div>
+            </div>
+            <div class="iconsContainer">
+                <div class="icons">
+                    <div class="image">
+                        <img class="imgClass" id="img1" alt=""></div>
+                    <p class="weather" id="day4"></p>
+                    <p class="temp" id="day4Temp"></p>
+                    <p class="wind" id="day4Wind"></p>
+                    <p class="humidity" id="day4Humidity"></p>
+                </div>
+            </div>
+            <div class="iconsContainer">
+                <div class="icons">
+                    <div class="image">
+                        <img class="imgClass" id="img1" alt=""></div>
+                    <p class="weather" id="day5"></p>
+                    <p class="temp" id="day5Temp"></p>
+                    <p class="wind" id="day5Wind"></p>
+                    <p class="humidity" id="day5Humidity"></p>
+                </div>
+            </div>
+    </main>
+    <script type="text/javascript"></script>
+    <script src="./assets/script/script.js"></script>
+</body>
+
+</html>

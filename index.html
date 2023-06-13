@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weather dashboard</title>
-    <!-- links to css-->
+
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <header>
@@ -14,24 +14,24 @@
 
 <body onload="defaultScreen()">
     <main>
-        <!-- search bar, previous search -->
+
         <div>
             <p id="inputContainer">Enter a city: <input type="text" id="cityInput">
                 <button onclick="getInfo()">Search</button>
             </p>
         </div>
-        <div style="width:500px;height: 50px;border:2px solid #000;">
+        <div id="previousSearch" style="width:500px;height: 50px;border:2px solid #000;">
             <h3 id="cityName">--minneapolis--</h3>
         </div>
 
-        <!-- weather container-->
         <div class="weatherContainer">
             <div class="iconsContainer">
                 <div class="icons">
                     <div class="image">
-                        <img class="imgClass" id="img1" alt=""></div>
+                        <img class="imgClass" id="img1" alt="">
+                    </div>
                     <p class="weather" id="day1"></p>
-                    <p class="temp" id="day1TempMin"></p>
+                    <p class="temp" id="day1Temp"></p>
                     <p class="wind" id="day1Wind"></p>
                     <p class="humidity" id="day1Humidity"></p>
                 </div>
@@ -39,9 +39,10 @@
             <div class="iconsContainer">
                 <div class="icons">
                     <div class="image">
-                        <img class="imgClass" id="img1" alt=""></div>
+                        <img class="imgClass" id="img1" alt="">
+                    </div>
                     <p class="weather" id="day2"></p>
-                    <p class="temp" id="day2TempMin"></p>
+                    <p class="temp" id="day2Temp"></p>
                     <p class="wind" id="day2Wind"></p>
                     <p class="humidity" id="day2Humidity"></p>
                 </div>
@@ -49,9 +50,10 @@
             <div class="iconsContainer">
                 <div class="icons">
                     <div class="image">
-                        <img class="imgClass" id="img1" alt=""></div>
+                        <img class="imgClass" id="img1" alt="">
+                    </div>
                     <p class="weather" id="day3"></p>
-                    <p class="temp" id="day3TempMin"></p>
+                    <p class="temp" id="day3Temp"></p>
                     <p class="wind" id="day3Wind"></p>
                     <p class="humidity" id="day3Humidity"></p>
                 </div>
@@ -59,9 +61,10 @@
             <div class="iconsContainer">
                 <div class="icons">
                     <div class="image">
-                        <img class="imgClass" id="img1" alt=""></div>
+                        <img class="imgClass" id="img1" alt="">
+                    </div>
                     <p class="weather" id="day4"></p>
-                    <p class="temp" id="day4TempMin"></p>
+                    <p class="temp" id="day4Temp"></p>
                     <p class="wind" id="day4Wind"></p>
                     <p class="humidity" id="day4Humidity"></p>
                 </div>
@@ -69,9 +72,10 @@
             <div class="iconsContainer">
                 <div class="icons">
                     <div class="image">
-                        <img class="imgClass" id="img1" alt=""></div>
+                        <img class="imgClass" id="img1" alt="">
+                    </div>
                     <p class="weather" id="day5"></p>
-                    <p class="temp" id="day5TempMin"></p>
+                    <p class="temp" id="day5Temp"></p>
                     <p class="wind" id="day5Wind"></p>
                     <p class="humidity" id="day5Humidity"></p>
                 </div>

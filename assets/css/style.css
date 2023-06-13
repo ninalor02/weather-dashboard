@@ -1,26 +1,31 @@
-*{
+* {
     font-weight: bold;
-    margin:10px;
+    margin: 10px;
     padding: 10px;
     border: 10px black;
 }
 
-header{
-    background-image: linear-gradient(to right, red , yellow);
+header {
+    background-image: linear-gradient(to right, red, yellow);
     text-align: center;
 }
-input, #searchbar{
+
+input,
+#searchbar {
     background-color: bisque;
 }
 
-#cityInput, #cityName, #inputContainer, button{
+#cityInput,
+#cityName,
+#inputContainer,
+button {
     text-align: center;
 }
 
-#weatherContainer{
+#weatherContainer {
     border-radius: 10%;
     width: 1300px;
-    height:300px;
+    height: 300px;
     transform: translate(-50%, -50%);
     margin-right: -50%;
     left: 50%;
@@ -28,7 +33,8 @@ input, #searchbar{
     position: absolute;
 }
 
-#iconsContainer{
+#iconsContainer {
+    border: 30px black;
     border-radius: 10%;
     width: 1200px;
     height: 240px;
@@ -39,33 +45,36 @@ input, #searchbar{
     position: absolute;
 }
 
-#icons{
+#icons {
     border-radius: 10px;
     width: 190px;
     height: 200px;
     display: inline-block;
 }
 
-.weather{
+.weather {
     text-align: center;
     border-radius: 5px;
 }
 
-h2{
-    background-color: aqua;
+h2 {
+    /*   background-color: aqua; */
     text-align: left;
 }
 
-.minValues{
-    background-color: aquamarine;
+.weather,
+.temp,
+.wind,
+.humidity {
+    /* background-color: aquamarine; */
     width: 25px;
     height: 25px;
     display: inline-block;
     text-align: center;
 }
 
-.maxValues{
-    background-color: blue;
+.imgClass {
+    /*  background-color: blue; */
     display: inline-block;
     width: 25px;
     height: 25px;
