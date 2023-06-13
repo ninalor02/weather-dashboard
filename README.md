@@ -25,3 +25,6 @@ Once you press the search button, you should have the result of a current and 5 
 
 - unfortunetly I don't have an image of the completed part.
 
+This is live page for this challenge on Github: https://ninalor02.github.io/weather-dashboard/
+
+This is my Github profile : https://github.com/ninalor02
