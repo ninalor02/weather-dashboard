@@ -14,72 +14,61 @@
 
 <body onload="defaultScreen()">
     <main>
-
         <div>
             <p id="inputContainer">Enter a city: <input type="text" id="cityInput">
                 <button onclick="getInfo()">Search</button>
             </p>
         </div>
-        <div id="previousSearch" style="width:500px;height: 50px;border:2px solid #000;">
+        <div id="previousSearch">
             <h3 id="cityName">--minneapolis--</h3>
         </div>
-
         <div class="weatherContainer">
             <div class="iconsContainer">
                 <div class="icons">
-                    <div class="image">
-                        <img class="imgClass" id="img1" alt="">
+                    <div class="image"><img src="./assets/images/dots.jpg" class="imgClass" id="img1" alt="">
                     </div>
                     <p class="weather" id="day1"></p>
                     <p class="temp" id="day1Temp"></p>
                     <p class="wind" id="day1Wind"></p>
                     <p class="humidity" id="day1Humidity"></p>
                 </div>
-            </div>
-            <div class="iconsContainer">
-                <div class="icons">
-                    <div class="image">
-                        <img class="imgClass" id="img1" alt="">
+                <div class="iconsContainer">
+                    <div class="icons">
+                        <div class="image"><img src="./assets/images/dots.jpg" class="imgClass" id="img2" alt="">
+                        </div>
+                        <p class="weather" id="day2"></p>
+                        <p class="temp" id="day2Temp"></p>
+                        <p class="wind" id="day2Wind"></p>
+                        <p class="humidity" id="day2Humidity"></p>
                     </div>
-                    <p class="weather" id="day2"></p>
-                    <p class="temp" id="day2Temp"></p>
-                    <p class="wind" id="day2Wind"></p>
-                    <p class="humidity" id="day2Humidity"></p>
-                </div>
-            </div>
-            <div class="iconsContainer">
-                <div class="icons">
-                    <div class="image">
-                        <img class="imgClass" id="img1" alt="">
-                    </div>
-                    <p class="weather" id="day3"></p>
-                    <p class="temp" id="day3Temp"></p>
-                    <p class="wind" id="day3Wind"></p>
-                    <p class="humidity" id="day3Humidity"></p>
-                </div>
-            </div>
-            <div class="iconsContainer">
-                <div class="icons">
-                    <div class="image">
-                        <img class="imgClass" id="img1" alt="">
-                    </div>
-                    <p class="weather" id="day4"></p>
-                    <p class="temp" id="day4Temp"></p>
-                    <p class="wind" id="day4Wind"></p>
-                    <p class="humidity" id="day4Humidity"></p>
-                </div>
-            </div>
-            <div class="iconsContainer">
-                <div class="icons">
-                    <div class="image">
-                        <img class="imgClass" id="img1" alt="">
-                    </div>
-                    <p class="weather" id="day5"></p>
-                    <p class="temp" id="day5Temp"></p>
-                    <p class="wind" id="day5Wind"></p>
-                    <p class="humidity" id="day5Humidity"></p>
-                </div>
-            </div>
+                    <div class="iconsContainer">
+                        <div class="icons">
+                            <div class="image"><img src="./assets/images/dots.jpg" class="imgClass" id="img3" alt="">
+                            </div>
+                            <p class="weather" id="day3"></p>
+                            <p class="temp" id="day3Temp"></p>
+                            <p class="wind" id="day3Wind"></p>
+                            <p class="humidity" id="day3Humidity"></p>
+                        </div>
+                        <div class="iconsContainer">
+                            <div class="icons">
+                                <div class="image"><img src="./assets/images/dots.jpg" class="imgClass" id="img4" alt="">
+                                </div>
+                                <p class="weather" id="day4"></p>
+                                <p class="temp" id="dayTemp"></p>
+                                <p class="wind" id="dayWind"></p>
+                                <p class="humidity" id="dayHumidity"></p>
+                            </div>
+                            <div class="iconsContainer">
+                                <div class="icons">
+                                    <div class="image"><img src="./assets/images/dots.jpg" class="imgClass" id="img5" alt="">
+                                    </div>
+                                    <p class="weather" id="day5"></p>
+                                    <p class="temp" id="day5Temp"></p>
+                                    <p class="wind" id="day5Wind"></p>
+                                    <p class="humidity" id="day5Humidity"></p>
+                                </div>
+                            </div>
     </main>
     <script type="text/javascript"></script>
     <script src="./assets/script/script.js"></script>

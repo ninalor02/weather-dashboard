@@ -1,4 +1,4 @@
-var apiKey = "2aa5de91e2d58f7baa00946e1b387784"
+var apiKey = "5b51a29dd1b813dcdfca285c33322dcc"
 var savedSearches = [];
 
 function getInfo() {
@@ -7,7 +7,7 @@ function getInfo() {
   cityName.innerHTML = "--" + newName.value + "--"
 
 
-  fetch("http://api.openweathermap.org/data/2.5/forecast?q='+newName.value+'&appid=2aa5de91e2d58f7baa00946e1b387784")
+  fetch("https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=5b51a29dd1b813dcdfca285c33322dcc")
     .then(response => response.json())
     .then(data => {
 
